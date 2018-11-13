@@ -6,13 +6,13 @@
 /*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 21:17:36 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/12 13:28:46 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/13 12:59:28 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLIT_H
 # define FILLIT_H
-# include "libft/libft.h"
+# include "../libft/libft.h"
 # include <stdlib.h>
 # include <fcntl.h>
 # include <unistd.h>
