@@ -10,7 +10,7 @@ Run `make`. An executable name `fillit` will be generated.
 
 Example:
 ```
-~./fillit samples/26
+./fillit samples/26
 
 A..B.CCDDEM
 ABBBCCGDDEM
