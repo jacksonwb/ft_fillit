@@ -6,11 +6,11 @@
 /*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:08:13 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/12 10:42:44 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/13 12:58:08 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../includes/fillit.h"
 
 int			check_count(char *buf)
 {

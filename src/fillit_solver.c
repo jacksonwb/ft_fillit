@@ -6,11 +6,11 @@
 /*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 16:41:40 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/12 12:02:00 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/13 12:58:32 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../includes/fillit.h"
 
 int		spot_check(t_tetrim *elem, t_16 *map)
 {

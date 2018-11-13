@@ -6,11 +6,11 @@
 /*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 17:03:34 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/12 10:27:40 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/13 12:58:50 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../includes/fillit.h"
 
 void	print_64(t_64 n)
 {

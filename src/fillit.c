@@ -6,15 +6,16 @@
 /*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 21:19:57 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/12 12:32:00 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/13 13:01:32 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../includes/fillit.h"
 
 void	die(char *str)
 {
-	write(1, str, ft_strlen(str) + 1);
+	write(1, str, ft_strlen(str));
+	write(1, "\n", 1);
 	exit(0);
 }
 
