@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 21:19:57 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/13 13:01:32 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/16 15:22:46 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	printer(char **grid, unsigned int size)
 int		main(int argc, char **argv)
 {
 	t_tetrim	*ar[27];
-	uint16_t	map[16];
+	t_16		map[16];
 	int			fd;
 
 	ft_bzero(map, sizeof(map));

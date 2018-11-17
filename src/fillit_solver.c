@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit_solver.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jackson <jackson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 16:41:40 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/13 12:58:32 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/16 15:19:26 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int		spot_check(t_tetrim *elem, t_16 *map)
 {
-	return (!((elem->val >> elem->x) & *(uint64_t*)(map + elem->y)));
+	return (!((elem->val >> elem->x) & *(t_64*)(map + elem->y)));
 }
 
-void	toggle(uint64_t val, int x, int y, uint16_t *map)
+void	toggle(t_64 val, int x, int y, t_16 *map)
 {
-	*(uint64_t*)(map + y) ^= val >> x;
+	*(t_64*)(map + y) ^= val >> x;
 }
 
 char	**grid_builder(t_tetrim **ar, unsigned int size, unsigned int pieces)

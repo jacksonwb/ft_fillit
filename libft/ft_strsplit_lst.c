@@ -38,9 +38,7 @@ t_list			*ft_strsplit_lst(char const *s, char c)
 {
 	t_list		*lst;
 	int			flag;
-	int			i;
-
-	i = 0;
+	
 	flag = 0;
 	if (!s)
 		return (NULL);

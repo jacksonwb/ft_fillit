@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jbeall <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/22 16:25:23 by jbeall            #+#    #+#              #
-#    Updated: 2018/11/12 15:08:38 by jbeall           ###   ########.fr        #
+#    Updated: 2018/11/16 16:06:25 by jackson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,11 +45,14 @@ OBJECTS = ./ft_memset.o ./ft_bzero.o ./ft_memcpy.o ./ft_memccpy.o \
 FLAGS = -Wall -Werror -Wextra
 
 $(NAME):
-	gcc $(FLAGS) -c $(SRC) -I$(INCLUDES)
-	ar -rc $(NAME) $(OBJECTS)
+	@gcc $(FLAGS) -c $(SRC) -I.
+	@echo "Building libft.a library..."
+	@echo "\033[92mdone!\033[0m"
+	@ar -rc $(NAME) $(OBJECTS)
 all: $(NAME)
 clean:
-	rm -f $(OBJECTS)
+	@rm -f $(OBJECTS) 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "libft.a removed!"
 re: fclean all
