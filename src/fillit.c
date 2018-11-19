@@ -6,7 +6,7 @@
 /*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 21:19:57 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/16 15:22:46 by jackson          ###   ########.fr       */
+/*   Updated: 2018/11/18 20:20:17 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	die(char *str)
 	write(1, "\n", 1);
 	exit(0);
 }
+
+/*
+** Allocates enough memory for each line of the final print grid
+*/
 
 char	**grid_initialize(unsigned int size)
 {
@@ -33,6 +37,11 @@ char	**grid_initialize(unsigned int size)
 	}
 	return (grid);
 }
+
+/*
+** Read a set of 21 characters from the input file. Each valid pieces consists of 21 characters, including new lines.
+** Then the validity of the piece is checked and it is either converted to a struct representation or an error is thrown.
+*/
 
 int		read_blocks(int fd, t_tetrim **ar)
 {
@@ -57,6 +66,10 @@ int		read_blocks(int fd, t_tetrim **ar)
 	return (1);
 }
 
+/*
+** This function is responsible for printing the final representation of the solved map.
+*/
+
 void	printer(char **grid, unsigned int size)
 {
 	unsigned int i;
@@ -69,6 +82,10 @@ void	printer(char **grid, unsigned int size)
 		++i;
 	}
 }
+
+/*
+** This is the entry point for the program
+*/
 
 int		main(int argc, char **argv)
 {

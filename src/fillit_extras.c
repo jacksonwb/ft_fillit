@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   fillit_extras.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 17:03:34 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/13 12:58:50 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/18 20:30:06 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
+
+/*
+** A utility used for printing out a t_64 integar representation of a piece used for debugging
+*/
 
 void	print_64(t_64 n)
 {
@@ -32,6 +36,10 @@ void	print_64(t_64 n)
 		++i;
 	}
 }
+
+/*
+** Prints the solved map
+*/
 
 void print_map(t_16* map)
 {

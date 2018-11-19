@@ -3,24 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   fillit_solver.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jackson <jackson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 16:41:40 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/16 15:19:26 by jackson          ###   ########.fr       */
+/*   Updated: 2018/11/18 20:28:13 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
+
+/*
+** Test if the piece is positioned in a valid spot on the map.
+*/
 
 int		spot_check(t_tetrim *elem, t_16 *map)
 {
 	return (!((elem->val >> elem->x) & *(t_64*)(map + elem->y)));
 }
 
+/*
+** Toggles the piece on or off of the map
+*/
+
 void	toggle(t_64 val, int x, int y, t_16 *map)
 {
 	*(t_64*)(map + y) ^= val >> x;
 }
+
+/*
+** Populates an asci grid with each pieces location for printing the solved map
+*/
 
 char	**grid_builder(t_tetrim **ar, unsigned int size, unsigned int pieces)
 {
@@ -51,6 +63,10 @@ char	**grid_builder(t_tetrim **ar, unsigned int size, unsigned int pieces)
 	return (grid);
 }
 
+/*
+** The recursive backtracking implememtaion of the solver
+*/
+
 int		r_solver(t_tetrim **ar, t_16 *map, t_state *state, int i)
 {
 	while ((ar[i])->y + ar[i]->h <= state->size)
@@ -78,6 +94,10 @@ int		r_solver(t_tetrim **ar, t_16 *map, t_state *state, int i)
 	ar[i]->y = 0;
 	return (0);
 }
+
+/*
+** The entry point for the solver
+*/
 
 void	solver(t_tetrim **ar, t_16 *map)
 {

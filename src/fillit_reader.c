@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   fillit_reader.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:08:13 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/13 12:58:08 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/11/18 20:24:55 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
+
+/*
+** This function checks that the piece in the buffer has the correct number of sharps and dots
+*/
 
 int			check_count(char *buf)
 {
@@ -35,6 +39,10 @@ int			check_count(char *buf)
 		return (0);
 }
 
+/*
+** This function checks to see if the bufferized piece has the correct layout format
+*/
+
 int			check_format(char *buf)
 {
 	int i;
@@ -55,6 +63,10 @@ int			check_format(char *buf)
 		return (0);
 	return (1);
 }
+
+/*
+** This function checks if the piece has a valid tetris shape
+*/
 
 int			check_connect(char *buf)
 {
@@ -85,6 +97,10 @@ int			check_connect(char *buf)
 	return (connects == 6 || connects == 8);
 }
 
+/*
+** This funtion finds the mix and max locations of each piece within its grid
+*/
+
 void		min_maxer(char *buf, int *mx)
 {
 	int	i;
@@ -110,6 +126,10 @@ void		min_maxer(char *buf, int *mx)
 		++i;
 	}
 }
+
+/*
+** This function converts the piece in a struct element and represents the piece in a t_64 type integar bitfield
+*/
 
 t_tetrim	*structify(char *buf)
 {
