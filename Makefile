@@ -6,7 +6,7 @@
 #    By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/01 14:21:53 by jbeall            #+#    #+#              #
-#    Updated: 2018/11/26 16:02:46 by jbeall           ###   ########.fr        #
+#    Updated: 2018/12/14 21:24:44 by jackson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ LIBRARIES = ./libft/libft.a
 $(NAME):
 	@make -C ./libft --no-print-directory
 	@echo "Creating fillit executable..."
-	@gcc -o $(NAME) $(FLAGS) $(SRC) $(LIBRARIES) -I$(INCLUDES) -O3
+	@clang -o $(NAME) $(FLAGS) $(SRC) $(LIBRARIES) -I$(INCLUDES) -O3 
 	@echo "\033[92mdone!\033[0m"
 all: $(NAME)
 test: fclean

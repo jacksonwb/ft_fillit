@@ -6,7 +6,7 @@
 /*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 21:19:57 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/18 20:20:17 by jackson          ###   ########.fr       */
+/*   Updated: 2018/12/14 21:25:40 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	die(char *str)
 {
-	write(1, str, ft_strlen(str));
+	(void)write(1, str, ft_strlen(str));
 	write(1, "\n", 1);
 	exit(0);
 }
